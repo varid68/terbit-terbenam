@@ -1,0 +1,60 @@
+page-simpan {
+	.toolbar-md {
+		color: #fff;
+		box-shadow: 0px 1px 18px 0px rgba(0,0,0,0.75);
+
+		#back-button {
+			font-size: 4rem;
+		}
+
+		span:nth-child(1) {
+			font-size: 1.6rem;
+		}
+	}
+
+	.scroll-content {
+		background-color: #f5f5f5;
+
+		.col {
+			padding: 0;
+		}
+
+		#tanggal {
+			background-color: map-get($colors,orange);
+		  text-align: center;
+		  padding: 10px 0;
+		  color: #fff;
+		  border-radius: 5px;
+		  margin-top: 5px;
+
+		  span:nth-child(1) {
+		  	font-size: 1.8rem;
+		  	font-weight: bolder;
+		  }
+		}
+
+		#desc-simpan {
+			span:nth-child(1) {
+				display: block;
+				margin-bottom: 5px;
+				font-size: 1.5rem;
+			}
+
+			span.desc-jam {
+				color: #666;
+			}
+
+			span.jam {
+				font-size: 1.6rem;
+			}
+		}
+
+		#line {
+			width: 100%;
+			border-bottom: 1px solid #e3e3e3;
+			margin-top: 5px;
+			margin-bottom: 10px;
+		}
+
+	}
+}

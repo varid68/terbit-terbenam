@@ -1,0 +1,52 @@
+<!--
+  Generated template for the TentangPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar color="teal" padding>
+	  <ion-buttons margin-right left>
+		  <button ion-button (tap)="back()" icon-only>
+		  	<ion-icon name="md-arrow-dropleft" id="back-button"></ion-icon>
+		  </button>
+	  </ion-buttons>
+    <span>Riwayat Waktu</span><br>
+    <span>Terbit Terbenam Disimpan</span>
+    <ion-buttons right>
+	    <button ion-button (tap)="hapusRiwayat()" icon-only>
+	    	<ion-icon name="ios-trash-outline"></ion-icon>
+	    </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<div *ngIf="!kosong">
+		<ion-grid *ngFor="let item of list">
+			<ion-row tappable (tap)="detailItem(item)">
+				<ion-col col-2>
+					<div id="tanggal">
+						<span [innerHTML]="ambilTanggal(item.tanggal)"></span><br>
+						<span [innerHTML]="ambilBulan(item.tanggal)"></span>
+					</div>
+				</ion-col>
+				<ion-col text-capitalize margin-left>
+					<div id="desc-simpan">
+						<span>catatan waktu untuk {{ item.tanggal }}</span>
+						<span class="desc-jam">waktu terbit </span><span class="jam">{{ item.waktu.terbit }}</span><br>
+						<span class="desc-jam">waktu terbenam </span><span class="jam">{{ item.waktu.terbenam }}</span>
+					</div>
+				</ion-col>
+			</ion-row><div id="line" *ngIf="list"></div>
+		</ion-grid>
+	</div>
+	
+
+	<div *ngIf="kosong">Tidak Ada Item Yang Tersimpan</div>
+
+</ion-content>

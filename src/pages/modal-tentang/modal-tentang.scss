@@ -1,0 +1,51 @@
+page-modal-tentang {
+	#versi {
+		img {
+			float: left;
+			padding-top: 2%;
+		}
+
+		span {
+			padding-left: 5px;
+		}
+
+		#nama {
+			font-size: 1.8rem;
+		}
+
+		#maker	{
+			display: inline-block;
+			padding-top: 10px;
+		}
+	}
+
+	#api {
+		margin-top: 20px;
+
+		h3 {
+			text-align: left;
+			color: map-get($colors,teal);
+		}
+
+		a {
+			color: map-get($colors,teal);
+		}
+	}
+
+	#tentang {
+		margin-top: 20px;
+
+		h4 {
+			color: map-get($colors,teal);
+		}
+
+		#note {
+			text-align: center;
+		  display: block;
+		  margin-top: 10px;
+		  color: red;
+		  font-size: 1.2rem;
+		}
+	}
+
+}

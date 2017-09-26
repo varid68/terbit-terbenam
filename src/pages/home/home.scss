@@ -1,0 +1,54 @@
+page-home {
+	.toolbar-md {
+		color: #fff;
+		box-shadow: 0px 1px 18px 0px rgba(0,0,0,0.75);
+	}
+
+	.scroll-content {
+		background-color: #f5f5f5;
+
+		#atas {
+			width: 100%;
+
+			#tanggal {
+				display: block;
+			  margin: 10px 0;
+			  background-color: #f5f5f5;
+			  padding: 10px;
+			}
+
+			.line {
+				width: 100%;
+			  border-bottom: 1px solid #eee;
+			  margin-top: 10px;
+			}
+		}
+
+		#hasil {
+			margin: 15px 0;
+			width: 100%;
+
+			#header {
+				color: map-get($colors,teal);
+				font-size: 18px;
+			}
+
+			.line {
+				width: 100%;
+			  border-bottom: 1px solid #eee;
+			  margin-top: 5px;
+			  margin-bottom: 10px;
+			}
+
+			span.waktu {
+				display: block;
+				margin-bottom: 8px;
+				font-size: 18px;
+			}
+
+			span:not(.waktu):not(.button-inner):not(.p) {
+				color: #666;
+			}
+		}
+	}
+}

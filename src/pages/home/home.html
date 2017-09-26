@@ -1,0 +1,96 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar color="teal" padding>
+    <span>Waktu Matahari</span><br>
+    <span>Terbit dan Terbenam</span>
+    <ion-buttons end>
+	    <button ion-button (tap)="toSavePage()" icon-only>
+	    	<ion-icon name="md-time"></ion-icon>
+	    </button>
+    </ion-buttons>
+    <ion-buttons end>
+	    <button ion-button (tap)="tentangApps($event)" icon-only>
+	    	<ion-icon md="md-more"></ion-icon>
+	    </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-card no-margin id="atas">
+		<ion-card-content padding text-capitalize>
+			<span>tanggal pengecekan waktu</span><br>
+			<span id="tanggal">{{ tanggal }}</span>
+			<span>lokasi tempat anda berada</span><br>
+			<div>latitude : {{ lat }}</div>
+			<div>longitude: {{ long }}</div>
+			<div class="line"></div>
+			<div float-right>
+				<button ion-button clear (tap)="terbitTerbenam()">cek waktu</button>
+				<button ion-button clear (tap)="showDatePicker()">setel tanggal</button>
+			</div>
+		</ion-card-content>
+	</ion-card>
+
+	<ion-card id="hasil">
+		<ion-card-content text-capitalize>
+			<span id="header">waktu terbit terbenam</span><br>
+			<span class="p">{{ tanggal }}</span>
+
+			<div class="line"></div>
+
+			<span>waktu matahari terbit</span><br>
+			<span class="waktu">{{ dataWaktu.terbit }}</span>
+			<span [hidden]="!stillLoading"><ion-spinner name="crescent"></ion-spinner><br></span>
+
+			<span>waktu matahari terbenam</span><br>
+			<span class="waktu">{{ dataWaktu.terbenam }}</span>
+			<span [hidden]="!stillLoading"><ion-spinner name="crescent"></ion-spinner><br></span>
+
+			<span>waktu matahari tepat diatas (tengah hari)</span><br>
+			<span class="waktu">{{ dataWaktu.tepatDiatas }}</span>
+			<span [hidden]="!stillLoading"><ion-spinner name="crescent"></ion-spinner><br></span>
+
+			<span>panjang waktu matahari bersinar</span><br>
+			<span class="waktu">{{ dataWaktu.lamaBersinar }}</span>
+			<span [hidden]="!stillLoading"><ion-spinner name="crescent"></ion-spinner><br></span>
+
+			<span>waktu civil twilight dimulai</span><br>
+			<span class="waktu">{{ dataWaktu.twilightMulai }}</span>
+			<span [hidden]="!stillLoading"><ion-spinner name="crescent"></ion-spinner><br></span>
+
+			<span>waktu civil twilight berakhir</span><br>
+			<span class="waktu">{{ dataWaktu.twilightEnd }}</span>
+			<span [hidden]="!stillLoading"><ion-spinner name="crescent"></ion-spinner><br></span>
+
+			<span>waktu civil nautical dimulai</span><br>
+			<span class="waktu">{{ dataWaktu.nauticalMulai }}</span>
+			<span [hidden]="!stillLoading"><ion-spinner name="crescent"></ion-spinner><br></span>
+
+			<span>waktu civil nautical berakhir</span><br>
+			<span class="waktu">{{ dataWaktu.nauticalEnd }}</span>
+			<span [hidden]="!stillLoading"><ion-spinner name="crescent"></ion-spinner><br></span>
+
+			<span>waktu civil astronomical dimulai</span><br>
+			<span class="waktu">{{ dataWaktu.astroMulai }}</span>
+			<span [hidden]="!stillLoading"><ion-spinner name="crescent"></ion-spinner><br></span>
+
+			<span>waktu civil astronomical dimulai</span><br>
+			<span class="waktu">{{ dataWaktu.astroEnd }}</span>
+			<span [hidden]="!stillLoading"><ion-spinner name="crescent"></ion-spinner><br></span>
+			<div class="line"></div>
+			<button ion-button clear float-right (tap)="simpan()" [disabled]="stillLoading">simpan</button>
+		</ion-card-content>
+	</ion-card>
+	<div id="geolocation"></div>
+
+</ion-content>

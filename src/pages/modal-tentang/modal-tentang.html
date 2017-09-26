@@ -1,0 +1,47 @@
+<!--
+  Generated template for the ModalTentangPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header (dismiss)="dismissModal($event)" drag>
+
+  <ion-navbar color="teal">
+  	<span style="color: #fff; padding-left: 10px">Tentang Aplikasi</span>
+  	<ion-buttons right>
+  		<button ion-button icon-only (tap)="close()">
+  			<ion-icon name="close"></ion-icon>
+  		</button>
+  	</ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div id="versi">
+    <img src="./assets/img/logo.png">
+    <span id="nama">Terbit Terbenam</span><br>
+    <span>versi 1.0.0</span><br>
+    <span id="maker">dibuat oleh varid68@gmail.com</span>
+  </div>
+
+  <div id="api">
+    <h3>Sunrise Sunset API</h3>
+    <span>Aplikasi ini menggunakan Application Progamming Interface (API) untuki menghitung waktu matahari terbit dan terbenam yang tersedia di situs</span><br>
+    <a href="https://sunrise-sunset.org/api">https://sunrise-sunset.org/api.</a>
+  </div>
+
+  <div id="tentang">
+    <h4>Bantuan</h4>
+    <span>
+      Aplikasi Terbit Terbenam adalah aplikasi sederhana yang menampilkan waktu matahari terbit, waktu matahari terbenam, panjang waktu matahari bersinar, waktu terbit dan terbenam dalam skala sipil, waktu terbit dan terbenam dalam skala nautikal, dan Waktu terbit terbenam dalam skala astronomi. Yang mana semuanya dihitung berdasarkan letak posisi pengguna di bumi.
+     </span><br><br>
+     <span>
+      Aplikasi ini akan menghitung waktu matahari terbit dan terbenam di daerah anda dengan memanfaatkan koordinat lintang dan busur yang diperoleh dari GPS perangkat anda. Kemudian aplikasi akan mengecek dan menghitung waktunya berdasarkan posisi anda tersebut. Waktu yang ditampilkan adalah waktu matahari terbit dan terbenam, dan Waktu-waktu astronomi lainnya, dalam Format waktu 24 Jam
+    </span><br>
+    <span id="note">Inspired by Rian Yulianto W (Om kucing)</span>
+  </div>
+
+</ion-content>
