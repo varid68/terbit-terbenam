@@ -30,4 +30,4 @@ Aplikasi ini dibuat menggunakan ionic yang mana dapat menampilkan waktu matahari
 
  ## Download apk
 
-<a href="https://drive.google.com/open?id=0Bxp6Hpy2uQydNmZ1X19PQVd6Slk">Downlaod from Google drive</a>
+<a href="https://drive.google.com/open?id=0Bxp6Hpy2uQydNmZ1X19PQVd6Slk" target="_blank">Downlaod from Google drive</a>
