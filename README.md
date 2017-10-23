@@ -1,8 +1,10 @@
-# tentang aplikasi
+# Tentang aplikasi
 Aplikasi ini dibuat menggunakan ionic yang mana dapat menampilkan waktu matahari terbit, terbenam, panjang waktu matahari bersinar, waktu terbit dan terbenam dalam skala sipil, waktu terbit dan terbenam dalam skala nautikal, dan Waktu terbit terbenam dalam skala astronomi, waktu yang ditampilkan dalam Format waktu 24 Jam yang mana menggunakan api dari https://sunrise-sunset.org/api 
 
+Aplikasi saya buat dengan tujuan sebagai hasil evaluasi belajar saya dan bukan ditujukan untuk di komersilkan, secara desain telah ada di play store bernama TerbitTerbenam yang dibuat Kodelokus Cipta Aplikasi.
 
-## requirement
+
+## Requirement
 
  * Android sdk
  * nodeJs >= 8.4.0 & npm >= 5.3.0
